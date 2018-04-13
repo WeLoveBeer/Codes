@@ -1,0 +1,32 @@
+# git使用的一点心得
+
+在本地想要创建版本库：
+git add 
+git commit
+
+如果想和远程仓库关联，那就先config一下
+ $ git config --global user.name "coliyin@163.com"
+ $ git config --global user.email "coliyin@163.com"
+ 设置key
+ ssh-keygen -t rsa -C "coliyin@163.com"
+
+创建本地文件夹
+git init
+git add
+git commit -m
+
+和远程仓库关联：
+git remote add origin https://github.com/CongliYin/CSS.git
+如果remote存在的话fatal: remote origin already exists. 那就先删除
+git remote rm origin再添加
+
+最后就是一般的过程，先拉取，再提交
+git pull origin master
+git push origin master 
+
+pull或者push可能出现这个错误：
+Git failed with a fatal error.
+HttpRequestException encountered.
+   An error occurred while sending the request.
+解决方法：Windows下载 https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest
+  
